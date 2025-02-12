@@ -76,11 +76,14 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               ),
             ),
             SizedBox(height: 24),
-            Expanded(
-              child: InfiniteDragableSlider(
-                iteamCount: Magazine.fakeMagazinesValues.length,
-                itemBuilder: (context, index) => MagazineCoverImage(
-                    magazine: Magazine.fakeMagazinesValues[index]),
+            SizedBox(
+              height: 200,
+              child: Expanded(
+                child: InfiniteDragableSlider(
+                  iteamCount: Magazine.fakeMagazinesValues.length,
+                  itemBuilder: (context, index) => MagazineCoverImage(
+                      magazine: Magazine.fakeMagazinesValues[index]),
+                ),
               ),
             ),
             SizedBox(height: 72),
